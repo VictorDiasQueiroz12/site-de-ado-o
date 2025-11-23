@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote um Amigo - Animais para Adoção</title>
+    <link rel="shortcut icon" href="fotos/adocao.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🐾 Adote um Amigo</div>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="adocao.html" class="active">Adoção</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Animais para Adoção</h1>
+            <p>Conheça nossos amiguinhos que estão esperando por um lar 🏠💕</p>
+        </section>
+
+        <section class="pets-grid" id="petsContainer"></section>
+
+        <!-- Modal/formulário de adoção (inicialmente oculto) -->
+        <div id="adoptModal" class="adopt-modal-overlay" aria-hidden="true">
+            <div class="adopt-modal" role="dialog" aria-modal="true" aria-labelledby="adoptModalTitle">
+                <header>
+                    <h2 id="adoptModalTitle">Preencha abaixo para adotar</h2>
+                    <button class="close-btn" aria-label="Fechar" onclick="closeAdoptModal()">×</button>
+                </header>
+                <p>Caso você tenha interesse em adotar este animalzinho, preencha seus dados abaixo e clique em Enviar:</p>
+                <form id="adoptForm">
+                    <input type="hidden" name="petName" id="petNameField">
+                    <label for="nome">Nome</label>
+                    <input id="nome" name="nome" type="text" required>
+
+                    <label for="whatsapp">WhatsApp:</label>
+                    <input id="whatsapp" name="whatsapp" type="tel" placeholder="(xx) 9xxxx-xxxx" required>
+
+                    <label for="telefone">Telefone com DDD</label>
+                    <input id="telefone" name="telefone" type="tel" placeholder="(xx) xxxx-xxxx" required>
+
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" required>
+
+                    <div class="actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeAdoptModal()">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Adote um Amigo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
