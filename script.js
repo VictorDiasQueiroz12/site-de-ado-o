@@ -115,13 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const hour = new Date().getHours();
             const greetingElement = document.getElementById('greeting');
             
-            if (hour >= 5 && hour < 12) {
-                greetingElement.textContent = 'Bom dia! Que tal adotar um amigo hoje?';
-            } else if (hour >= 12 && hour < 18) {
-                greetingElement.textContent = 'Boa tarde! Conheça quem está esperando por você';
-            } else {
-                greetingElement.textContent = 'Boa noite! Alguém especial está te esperando';
-            }
+                if (hour >= 5 && hour < 12) {
+                    greetingElement.textContent = 'Bom dia! 👋';
+                } else if (hour >= 12 && hour < 18) {
+                    greetingElement.textContent = 'Boa tarde! 👋';
+                } else {
+                    greetingElement.textContent = 'Boa noite! 👋';
+                }
         }
         
         updateGreeting();
